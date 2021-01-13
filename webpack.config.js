@@ -41,11 +41,6 @@ module.exports = {
           {
             test: /\.html$/i,
             loader: 'html-loader',
-            options: {
-              limit: 8 * 1024,
-              esModule: false,
-              publicPath: './'
-            }
           },
           {
             test: /\.(png|jpe?g|gif)$/i,

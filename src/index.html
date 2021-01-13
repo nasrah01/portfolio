@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Eczar&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <title>Nasrah Abraham</title>
 </head>
 <body>
     <section class="intro">
         <header>
             <h2>Nasrah Abraham</h2>
-            <h2>Gabriel <span>Front</span></h2>
+            <h2>Gabriel - <span>Front</span></h2>
             <h2>End Developer</h2>
-            
-            <section class="canvas"></section>
         </header>
+        <section class="canvas"></section>
 
         <nav class="navigation">
             <ul class="navigation__list">
@@ -29,53 +28,56 @@
             </ul>
         </nav>
     </section>
-    <article>
-        <h2>About me</h2>
-        <p>I am a junior front-end developer based in London. I can deliver applications using HTML5, CSS3, Javascript, Jquery, PHP, MySQL, web data using XML, JSON and AJAX. 
-            <br/>I use npm and webpack 4/5 to manage my files and dependencies, along with using javascript libraries like React, GSAP, three.js 
-            to create beautiful, accessible, responsive, and dynamic websites.</p>
-    </article>
+    <main>
+        <article class="about">
+            <h2 class="section__heading about__heading">About me</h2>
+            <p class="about__content">I am a junior front-end developer based out of London. I have a passion for creating fun, innovative, responsive, and dynamic websites, I try to create code that is readable, modular and organised. 
+                <br/> I can develop applications using HTML5, CSS3, Javascript, Jquery, PHP, MySQL, web data using XML, JSON and AJAX. 
+                I use npm and webpack 4/5 to manage my files and dependencies, along with using javascript libraries like React, GSAP, three.js </p>
+        </article>
 
-    <section>
-        <h2>skills</h2>
-        <section>
-            <h3>Problem solving</h3>
-            <p>I have a passion for creating websites and applications, adopting an appropriate strategy to finding solutions for problems</p>
+        <section class="boxes">
+            <section class="boxes__box boxes__box--01">
+                <h3 class="section__subheading boxes__heading">Problem solving</h3>
+                <p>I have a passion for creating websites and applications, adopting an appropriate strategy to finding solutions for problems</p>
+            </section>
+            <section class="boxes__box boxes__box--02">
+                <h3 class="section__subheading boxes__heading">accessibility</h3>
+                <p>Using HTML5 semantics to achieve web accessibility and maximizing readability with color contrasts and font choices.</p>
+            </section>
+            <section class="boxes__box boxes__box--03">
+                <h3 class="section__subheading boxes__heading">responsive</h3>
+                <p>Creating pixel perfect layout allowing users to intuitively navigate through a website, with the use of media queries, CSS grid, and flexbox.</p>
+            </section>
+            <section class="boxes__box boxes__box--04">
+                <h3 class="section__subheading boxes__heading">Fast</h3>
+                <p>Cutting the load time of websites by utilizing strategies like lazy loading, using html srcset to use different image sizes based on the users’ screen size.</p>
+            </section>
         </section>
-        <section>
-            <h3>accessibility</h3>
-            <p>Using HTML5 semantics to achieve web accessibility and maximizing readability with color contrasts and font choices.</p>
-        </section>
-        <section>
-            <h3>responsive</h3>
-            <p>Creating pixel perfect layout for different screen sizes allowing users to intuitively navigate through a website, with the use of media queries, CSS grid, and flexbox. </p>
-        </section>
-        <section>
-            <h3>Fast</h3>
-            <p>Cutting the load time of websites by utilizing strategies like lazy loading, using html srcset to use different image sizes based on the users’ screen size.</p>
-        </section>
-    </section>
+    </main>
+    <section class="projects">
+        <h2 class="section__heading projects__heading">Projects</h2>
 
-    <section>
-        <h2>Projects</h2>
-        <h3>Time for some material</h3>
-
-        <section>
-            <h4><span>No.01</span>Login System using PHP</h4>
-            <p>A prototype for the department of computer science allowing students and faculty to log into the departments intranet system with a robust form validation, this includes a restricted administrator login to create new users. Click to view <span id="popup">Admin & User</span> login details</p>
-            <figure>
-                <figcaption>
+        <section class="project__left">
+            <div class="project__content project__left--content">
+                <h4><span>No.01</span>Login System using PHP</h4>
+                <p>A prototype for the department of computer science allowing students and faculty to log into the departments intranet system with a robust form validation, this includes a restricted administrator login to create new users. Click to view <span id="popup">Admin & User</span> login details</p>
+            </div>
+            <figure class="project__login project__left--image">
+                <figcaption class="project__links">
                     <a href="https://github.com/nasrah01/php_login" target="_blank">View Code</a>
                     <a href="https://titan.dcs.bbk.ac.uk/~nabrah01/intranet/index.php" target="_blank">View Project</a>
                 </figcaption> 
             </figure>
         </section>
 
-        <section>
-            <h4><span>No.02</span> Weather app using an API</h4>
-            <p>Using the Open Weather Map API, this application retrieves current weather forecast for a selected UK City, this weather app will report alerts for extreme weather conditions including extreme wind speeds, extreme high and low temperatures.</p>
-            <figure>
-                <figcaption>
+        <section class="project__right">
+            <div class="project__content project__right--content">
+                <h4><span>No.02</span> Weather app using an API</h4>
+                <p>Using the Open Weather Map API, this application retrieves current weather forecast for a selected UK City, this weather app will report alerts for extreme weather conditions including extreme wind speeds, extreme high and low temperatures.</p>
+            </div>
+                <figure  class="project__api">
+                <figcaption class="project__links">
                     <a href="https://github.com/nasrah01/web-data" target="_blank">View Code</a>
                     <a href="https://titan.dcs.bbk.ac.uk/~nabrah01/wd/fma/task2/apiweather.html" target="_blank">View Project</a>
                 </figcaption> 
@@ -83,10 +85,29 @@
         </section>
     </section>
 
+    <div class="popup__window">
+        <div class="popup__content">
+            <span class="popup__close">&times;</span>
+            <h2>Login Details</h2>
+            <p>To log in to the department of computer science intranet portal use one 
+                of the following login credentials </p>
+            <p><span class="popup__title">Student login</span> <br>
+                <span class="popup__log">username:</span> nasrah
+                <span class="popup__log">password:</span> password
+            </p>
+            <p><span class="popup__title">Administrator login</span><br>
+                <span class="popup__log">username:</span> admin
+                <span class="popup__log">password:</span> dcsadmin01
+            </p>
+        </div>
+    </div>
+    
     <footer>
-        <h2>Get in touch</h2>
-        <h3>I'd love to hear from you</h3>
-        <a href="mailto:nasrahdev.gmail.com">nasrahdev@gmail.com</a>
+        <div class="center">
+            <h2>Get in touch</h2>
+            <h3>I'd love to hear from you</h3>
+            <a href="mailto:nasrahdev.gmail.com">nasrahdev@gmail.com</a>
+        </div>
     </footer>
 </body>
 </html>

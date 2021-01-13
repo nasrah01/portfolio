@@ -1,8 +1,7 @@
 import './style/main.scss';
-import profilePic from './assets/nasrah1.jpg';
-import workspace from './assets/space.jpg';
+import * as SiteImage from './views/imageView';
+import * as PopupWindow from './views/popupView';
 
-const canvas = document.querySelector('.canvas');
+SiteImage.images();
+PopupWindow.popup();
 
-const insertImage = `<img src="${profilePic}" alt="" class="canvas__profile"/> <img src="${workspace}" alt=""  class="canvas__workspace"/>`;
-	canvas.insertAdjacentHTML('afterend', insertImage);
