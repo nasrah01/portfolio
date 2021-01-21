@@ -34,6 +34,7 @@ export const mobileNav = () => {
     const hamburger = document.querySelector('.navigation__container');
     const screen = document.querySelector('.navigation');
     const list = document.querySelector('.navigation__list');
+    const items = document.querySelectorAll('.navigation__item');
 
     const tl = gsap.timeline({paused: true, reversed: true});
 
@@ -59,4 +60,14 @@ export const mobileNav = () => {
             tl.reverse();
         }    
     }); 
+
+    items.forEach((item)  => {
+        item.addEventListener('click',() => {
+            tl.reverse();
+        });
+    }) 
+
+    if(window.innerWidth <= 750) {
+        
+    }
 };

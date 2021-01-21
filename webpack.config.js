@@ -6,16 +6,18 @@ module.exports = {
     entry: ['babel-polyfill', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/index_bundle.js' 
+        filename: 'js/[name].[contenthash].js'  
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/index.html",
+            title: 'Cashing',
+            favicon: "src/assets/favicon.png"
         }),
         new MiniCssExtractPlugin({
-            filename: 'main.css'
+          filename: '[name].[contenthash].css'
         })
     ],
     module:  {
@@ -44,11 +46,10 @@ module.exports = {
           },
           {
             test: /\.(png|jpe?g|gif)$/i,
-            use: [
-              {
-                loader: 'url-loader',
-              },
-            ],
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+            },
           },
         ]
       }
