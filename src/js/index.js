@@ -1,15 +1,14 @@
 import '../style/main.scss';
-import * as SiteImage from './views/imageView';
-import * as PopupWindow from './views/popupView';
-import * as Carouselbox from './views/carouselView';
-import * as Navigation from './views/navView';
+import * as PopupWindow from './popupView';
+import * as Carouselbox from './carouselView';
+import * as Navigation from './navView';
+import * as Images from './imageView';
 
 Navigation.urlHash();
 Navigation.mobileNav();
-SiteImage.images();
 PopupWindow.popup();
-Carouselbox.carousel();
-
+//Carouselbox.carousel();
+//Images.images();
 
 
 

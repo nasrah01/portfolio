@@ -8,34 +8,15 @@
     <title>Nasrah Abraham</title>
 </head>
 <body>
-    <script> 
-        function IEdetection() { 
-            var ua = window.navigator.userAgent; 
-            var msie = ua.indexOf('MSIE '); 
-            if (msie > 0) { 
-                window.location="error.html";
-                // IE 10 or older 
-                return ('IE ' + parseInt(ua.substring( 
-                    msie + 5, ua.indexOf('.', msie)), 10)); 
-            } 
-            var trident = ua.indexOf('Trident/'); 
-            if (trident > 0) { 
-                window.location="error.html";
-                // IE 11 
-                var rv = ua.indexOf('rv:'); 
-                return ('IE ' + parseInt(ua.substring( 
-                    rv + 3, ua.indexOf('.', rv)), 10));      
-            }
-        } 
-        IEdetection();  
-    </script> 
     <section class="intro" id="home">
         <header>
             <h2>Nasrah</h2>
             <h2> Abraham-Gabriel</h2>
             <h2> <span class="intro__highlight">Front-End</span> <span class="intro__span">Developer</span></h2>
         </header>
-        <section class="canvas"></section>
+        <section class="canvas">
+            <img src="./assets/code.jpg" alt="" class="canvas__code"/> <img src="./assets/coding.jpg" alt=""  class="canvas__workspace"/>
+        </section>
 
         <svg class="navigation__container openmenu" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
             <path class="navigation__one" d="M0 9h30v2H0z"/>
@@ -60,23 +41,24 @@
             </ul>
         </nav>
     </section>
-    <main  id="about">
+    <main  id="about" class="about__wrapper">
         <article class="about">
             <h2 class="section__heading about__heading">About me</h2>
-            <p class="about__content">I am a junior front-end developer based out of London. I have a passion for creating fun, innovative, responsive, and dynamic websites, I try to create code that is readable, modular and organised. 
-                <br/> I can develop applications using HTML5, CSS3, Javascript, Jquery, PHP, MySQL, web data using XML, JSON and AJAX. 
-                I use npm and webpack 4/5 to organise my files and manage my dependencies, along with using javascript libraries like React, GSAP, three.js </p>
+            <p class="about__content">I am a London based Junior Front-end Developer. I have a passion for 
+            creating fun, responsive, and dynamic websites, creating code that is readable, modular and 
+            organised. My approach is to start with a desktop-first design and media query my way to responsive mobile versions, with HTML, JavaScript, SASS, PHP, mySql, 
+            I also work with Javascript libraries React, GSAP and dabble with Three.js.  
+            </p>
         </article>
-
         <section class="boxes">
             <div class="boxes__wrapper">
                 <section class="boxes__box boxes__box--01">
                     <h3 class="section__subheading boxes__heading">Problem solving</h3>
-                    <p>I have a passion for creating websites and applications, adopting an appropriate strategy to finding solutions for problems</p>
+                    <p> I approach each problem as a learning experience, identifying a complex problem, breaking it down into smaller components and solving it. </p>
                 </section>
                 <section class="boxes__box boxes__box--02">
                     <h3 class="section__subheading boxes__heading">accessibility</h3>
-                    <p>Using HTML5 semantics to achieve web accessibility and maximizing readability with color contrasts and font choices.</p>
+                    <p>Using HTML semantics to achieve web accessibility, and maximizing readability by selecting appropriate color contrasts and font family.</p>
                 </section>
                 <section class="boxes__box boxes__box--03">
                     <h3 class="section__subheading boxes__heading">responsive</h3>
@@ -84,7 +66,7 @@
                 </section>
                 <section class="boxes__box boxes__box--04">
                     <h3 class="section__subheading boxes__heading">Fast</h3>
-                    <p>Cutting the load time of websites by utilizing strategies like lazy loading, using html srcset to use different image sizes based on the users’ screen size.</p>
+                    <p>Cutting the load time of websites by utilizing strategies like lazy loading, using srcset for images, decided the image pixels in relation to the largest image size used on a webpage.</p>
                 </section>
             </div>
         </section>
@@ -95,11 +77,18 @@
         <section class="project__left">
             <div class="project__content project__left--content">
                 <h4><span>No.01 </span>Login System using PHP</h4>
-                <p>A prototype for the department of computer science allowing students and faculty to log into the departments intranet system with a robust form validation, this includes a restricted administrator login to create new users. Click to view <span id="popup">Admin & User</span> login details</p>
+                <p>A prototype for the department of computer science allowing students and 
+                    faculty to log into the departments intranet system, this includes a restricted 
+                    administrator login to create new users. Login and registation validation carried 
+                    out using PHP. Click to view <span id="popup">Admin & User</span> login details
+                </p>
+                <div class="project__links">
+                    <a href="https://github.com/nasrah01/php_login" target="_blank">View Code</a>
+                </div>
             </div>
             <figure class="project__login project__left--image">
+                <a href="https://titan.dcs.bbk.ac.uk/~nabrah01/intranet/index.php" target="_blank"><img src="./assets/login02.png" alt="" class="project__image"/></a>
                 <figcaption class="project__links">
-                    <a href="https://github.com/nasrah01/php_login" target="_blank">View Code</a>
                     <a href="https://titan.dcs.bbk.ac.uk/~nabrah01/intranet/index.php" target="_blank">View Project</a>
                 </figcaption> 
             </figure>
@@ -107,28 +96,34 @@
 
         <section class="project__right">
             <div class="project__content project__right--content">
-                <h4><span>No.02 </span> Weather app using an API</h4>
-                <p>Using the Open Weather Map API, this application retrieves current weather forecast for a selected UK City, this weather app will report alerts for extreme weather conditions including extreme wind speeds, extreme high and low temperatures.</p>
+                <h4><span>No.02 </span>YouTube API using React</h4>
+                <p>Current project, recreating some of the functionalities found on youtube, including 
+                    making an api request for the most popular videos to include on the 
+                    recommended videos section. Search for videos, and play selected videos.
+                </p>
+                <div class="project__links">
+                    <a href="https://github.com/nasrah01/youtube-clone" target="_blank">View Code</a>
+                </div>
             </div>
                 <figure  class="project__api">
-                <figcaption class="project__links">
-                    <a href="https://github.com/nasrah01/web-data" target="_blank">View Code</a>
-                    <a href="https://titan.dcs.bbk.ac.uk/~nabrah01/wd/fma/task2/apiweather.html" target="_blank">View Project</a>
-                </figcaption> 
+                    <a href="https://cloned-youtube.herokuapp.com/" target="_blank"><img src="./assets/youtube.png" alt="" class="project__image"/></a>
+                    <figcaption class="project__links">
+                        <a href="https://cloned-youtube.herokuapp.com/" target="_blank">View Project</a>
+                    </figcaption> 
             </figure>
         </section>
 
         <section class="project__left">
             <div class="project__content project__left--content">
-                <h4><span>No.03 </span>This website</h4>
-                <p>Using HTML5 markup and SCSS for the layout. JavaScript including event listeners, injecting images to the DOM, and a carousel for the skills section, GSAP for my mobile navigation.
-                    I used the newly released webpack 5 to bundle my Javascript files and to compile my scss file.
+                <h4><span>No.03 </span>My Portfolio Website</h4>
+                <p> A Single page eligant UX design, built using HTML 5 markup, SCSS, and JavaSript. 
                 </p>
+                <div class="project__links">
+                    <a href="https://github.com/nasrah01/portfolio" target="_blank">View Code</a>
+                </div>
             </div>
             <figure class="project__site project__left--image">
-                <figcaption class="project__links">
-                    <a href="https://github.com/nasrah01/portfolio" target="_blank">View Code</a>
-                </figcaption> 
+                <img src="./assets/self.png" alt="" class="project__image"/>
             </figure>
         </section>
     </section>
@@ -150,11 +145,14 @@
         </div>
     </div>
     
-    <footer id="contact">
-        <div class="center">
-            <h2>Get in touch</h2>
-            <h3>I'd love to hear from you</h3>
+    <footer id="contact" class='contact'>
+        <div class="contact__email">
+            <h3>Get in touch</h3>
             <a href="mailto:nasrahdev.gmail.com">nasrahdev@gmail.com</a>
+        </div>
+        <div class="contact__git">
+            <h3>Github repositories</h3>
+            <a href="https://github.com/nasrah01">nasrah01</a>
         </div>
     </footer>
 </body>

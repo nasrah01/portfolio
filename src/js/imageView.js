@@ -1,10 +1,10 @@
-import codingPic from '../../assets/code.jpg';
-import workspace from '../../assets/space.jpg';
-import weather from '../../assets/api.png';
-import login from '../../assets/login02.png';
-import profile from '../../assets/self.png';
+import codingPic from '../assets/code.jpg';
+import workspace from '../assets/coding.jpg';
+import weather from '../assets/youtube.png';
+import login from '../assets/login02.png';
+import profile from '../assets/self.png';
 
-const apiLink = "https://titan.dcs.bbk.ac.uk/~nabrah01/wd/fma/task2/apiweather.html";
+const apiLink = "https://cloned-youtube.herokuapp.com/";
 const intranetLink = "https://titan.dcs.bbk.ac.uk/~nabrah01/intranet/index.php";
 const profileLink = 'https://nasrah.dev';
 
@@ -20,9 +20,9 @@ export const images = () => {
     canvas.insertAdjacentHTML('afterend', insertImage);
 
 
-    const weatherCanvas = document.querySelector('.project__api');
-    const weatherImage = imageTag(weather, apiLink);
-    weatherCanvas.insertAdjacentHTML('afterbegin', weatherImage);
+    const apiCanvas = document.querySelector('.project__api');
+    const apiImage = imageTag(weather, apiLink);
+    apiCanvas.insertAdjacentHTML('afterbegin', apiImage);
 
     const loginCanvas = document.querySelector('.project__login');
     const loginImage = imageTag(login, intranetLink);
@@ -31,4 +31,6 @@ export const images = () => {
     const profileCanvas = document.querySelector('.project__site');
     const profileImage = imageTag(profile, profileLink);
     profileCanvas.insertAdjacentHTML('afterbegin', profileImage);
+
+    
 };
