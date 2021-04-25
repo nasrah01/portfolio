@@ -441,7 +441,7 @@ header {
 
 .about  {
     margin: 5rem 30rem 0 30rem;
-    padding: 5rem 7rem;
+    padding: 5rem 7rem 0 7rem;
 
     @media screen and (max-width: 1440px) {
         margin: 5rem 20rem 0 20rem;
@@ -452,16 +452,17 @@ header {
     }
 
     @media screen and (max-width: 900px) {
-        padding: 5rem 0;
+        padding: 0;
+        padding-top: 5rem;
     }
 
     @media screen and (max-width: 700px) {
         margin: 0 5rem;
-        padding: 3rem 0;
+        padding-top: 3rem;
     }
 
     @media screen and (max-width: 500px) {
-        padding: 2rem 0 5rem 0;
+        padding-top: 2rem;
         margin: 0 3rem;
     }
 
@@ -480,8 +481,12 @@ header {
             font-size: 1.8rem;
         }
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 1440px) {
             font-size: 1.6rem;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            font-size: 1.4rem;
         }
     }
 }
@@ -559,28 +564,32 @@ header {
     }
 
     &__heading {
-        padding-bottom: 2rem;
+        padding: 5rem 0 .5rem 0;
 
         @media screen and (max-width: 1400px) {
             font-size: 2rem;
+        }
+
+        @media screen and (max-width: 650px) {
+            padding: 2rem 0 .5rem 0;
         }
     }
     
     &__box {
         font-size: 2rem;
         text-align: center;
-        padding: 4rem;
+        padding: 0 4rem;
 
         @media screen and (max-width: 1600px) {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 1440px) {
+            font-size: 1.4rem;
         }
 
         @media screen and (max-width: 750px) {
             padding: 0 1rem 2rem 1rem;
-        }
-    
-        @media screen and (max-width: 500px) {
-            font-size: 1.6rem;
         }
     }
 }
@@ -591,7 +600,7 @@ header {
 background: #fff;
      
     &__heading {
-        padding: 5rem 0;
+        padding: 15rem 0 7rem 0;
 
         @media screen and (max-width: 550px) {
             padding: 5rem 0;

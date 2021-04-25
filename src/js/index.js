@@ -8,7 +8,7 @@ Navigation.urlHash();
 Navigation.mobileNav();
 PopupWindow.popup();
 //Carouselbox.carousel();
-//Images.images();
+Images.zoomImage();
 
 
 
