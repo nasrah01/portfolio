@@ -1,4 +1,10 @@
 import {gsap} from 'gsap';
+import codingPic from '../assets/code.jpg';
+import workspace from '../assets/coding.jpg';
+import weather from '../assets/youtube.jpg';
+import login from '../assets/login02.jpg';
+import profile from '../assets/self.jpg';
+import project from '../assets/workspace.jpg';
 
 const image = document.querySelectorAll('.project__image');
 
