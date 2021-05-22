@@ -439,16 +439,14 @@ header {
         }
 
         &--01, &--03 {
-            
             @media screen and (max-width:500px) {
-                background-color: rgba(242, 156, 148, .05);
+                border: 1px solid rgba(155, 80, 121, .1);
             }
         }
 
         &--02, &--04 {
-            opacity: 1;
             @media screen and (max-width:500px) {
-                background-color: #fcfcfc;
+                border: 1px solid rgba(118, 48, 217,.1);
             }
         }
     }
@@ -715,7 +713,6 @@ header {
 
 // popup
 #popup {
-    color: #7790A6;
     font-style: italic;
     cursor: pointer;
 }
@@ -728,9 +725,8 @@ header {
         z-index: 9999;
         top: 0;
         left: 0;
+        background-color: rgba(#000, .4);
         display: none;
-        
-        background-color: rgba(#fff, .7);
 
         @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
             -webkit-backdrop-filter: blur(10px);
@@ -744,33 +740,41 @@ header {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 5px;
         height: 600px;
         width: 800px;
         background-color: #fff;
         padding: 10rem 20rem;
+        font-size: 2rem;
+
+        @media screen and (max-width:1400px) {
+            width: 600px;
+            height: max-content;
+            padding: 5rem 10rem;
+            font-size: 1.8rem;
+        }
 
         @media screen and (max-width: 1000px) {
             width: 400px;
-            height: max-content;
-            padding: 5rem;
+            padding: 5rem 2rem;
+            font-size: 1.6rem;
         }
 
         @media screen and (max-width: 500px) {
-            width: 95vw;
+            width: 85vw;
             height: max-content;
-            padding: 5rem;
+            padding: 2rem;
+            top: 45%;
         }
 
         h2 {
-            text-transform: uppercase;
             text-align: center;
             padding: 1rem 0;
-            font-size: 2rem;
+            font-size: inherit;
         }
 
         p {
             padding: 2rem 0;
-            font-size: 2rem;
             text-align: center;
         }
     }
@@ -778,24 +782,41 @@ header {
     &__title {
         text-transform: uppercase;
         font-size: 1.8rem;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__log {
-        font-style: italic;
-        font-size: 1.8rem;
-        color: #F27052;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: #d9258b;
         padding-left: 1rem;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__close {
         position: absolute;
-        right: 3%;
-        top: 3%;
-        font-size: 4rem;
+        right: -3%;
+        top: -3%;
+        font-size: 3rem;
         cursor: pointer;
+        border-radius: 50%;
+        padding: 0 1.5rem;
+        background-color: #000;
+
+        color: #fff;
 
         &:hover, &:active {
-            color: #F27052;
+            background-color: #d9258b;
         }
     }
 }
