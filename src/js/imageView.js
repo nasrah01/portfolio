@@ -42,7 +42,7 @@ export const zoomImage = () => {
       document.addEventListener("DOMContentLoaded", function() {
         gsap.registerPlugin(ScrollTrigger);
         
-        gsap.utils.toArray(".project__image").forEach(function(elem) {
+        gsap.utils.toArray(".project__left").forEach(function(elem) {
           hide(elem); // assure that the element is hidden when scrolled into view
           
           ScrollTrigger.create({
