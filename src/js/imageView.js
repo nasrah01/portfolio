@@ -20,31 +20,38 @@ export const zoomImage = () => {
                 scale: 1
             })
         });
-    })
+    });
 
-    let proxy = { skew: 0 },
-    skewSetter = gsap.quickSetter(image, "skewY", "deg"), 
-    clamp = gsap.utils.clamp(-20, 20);  
 
-ScrollTrigger.create({
-  onUpdate: (self) => {
-    let skew = clamp(self.getVelocity() / -300);
-    if (Math.abs(skew) > Math.abs(proxy.skew)) {
-      proxy.skew = skew;
-      gsap.to(proxy, {
-          skew: 0, 
-          duration: 1, 
-          ease: "power3", 
-          overwrite: true, 
-          onUpdate: () => skewSetter(proxy.skew)
+    function animateFrom(elem) {
+       
+        gsap.fromTo(elem, {x: -100, autoAlpha: 0, opacity: 0}, {
+          duration: 1.25, 
+          x: 0, 
+          opacity: 1,
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
         });
-    }
-  }
-});
-
-gsap.set(image, {
-    transformOrigin: "right center", 
-    force3D: true
-});
+      }
+      
+      function hide(elem) {
+        gsap.set(elem, {autoAlpha: 0});
+      }
+      
+      document.addEventListener("DOMContentLoaded", function() {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.utils.toArray(".project__image").forEach(function(elem) {
+          hide(elem); // assure that the element is hidden when scrolled into view
+          
+          ScrollTrigger.create({
+            trigger: elem,
+            onEnter: function() { animateFrom(elem) }, 
+            onEnterBack: function() { animateFrom(elem) },
+            onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+          });
+        });
+      });
     
 };

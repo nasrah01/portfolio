@@ -33,13 +33,13 @@ export const animate = () => {
     gsap.registerPlugin(ScrollTrigger);
     
     gsap.utils.toArray(".boxes__box").forEach(function(elem) {
-      hide(elem); // assure that the element is hidden when scrolled into view
+      hide(elem);
       
       ScrollTrigger.create({
         trigger: elem,
         onEnter: function() { animateFrom(elem) }, 
         onEnterBack: function() { animateFrom(elem, -1) },
-        onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+        onLeave: function() { hide(elem) }
       });
     });
   });
