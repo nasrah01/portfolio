@@ -634,7 +634,7 @@ header {
     &__left {
         position: relative;
         background-color: #fff;
-        padding: 5rem;
+        padding: 5rem 5rem 0 5rem;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
@@ -670,7 +670,7 @@ header {
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: #221A40;
+    background: rgba(#221A40, 1);
     text-align: center;
     padding: 2rem 0;
 
